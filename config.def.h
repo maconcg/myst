@@ -240,10 +240,10 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ MODKEY,               XK_u,           copyurl,        {.i =  0} },
-	{ MODKEY,               XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ MODKEY,               XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ XK_ANY_MOD,           XK_Page_Up,     kscrollup,      {.i =  1} },
-	{ XK_ANY_MOD,           XK_Page_Down,   kscrolldown,    {.i =  1} },
+	{ XK_ANY_MOD,           XK_Page_Up,     kscrollup,      {.i = -1} },
+	{ XK_ANY_MOD,           XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ XK_ANY_MOD,           XK_Up,          kscrollup,      {.i =  1} },
+	{ XK_ANY_MOD,           XK_Down,        kscrolldown,    {.i =  1} },
 };
 
 /*
