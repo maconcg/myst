@@ -224,6 +224,7 @@ static MouseShortcut mshortcuts[] = {
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod4Mask
 #define TERMMOD (ControlMask|ShiftMask)
+#define SUMETAMOD (Mod1Mask|Mod4Mask)
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
@@ -234,16 +235,16 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_equal,       zoom,           {.f = +1} },
 	{ MODKEY,               XK_minus,       zoom,           {.f = -1} },
 	{ XK_ANY_MOD,           XK_Home,        zoomreset,      {.f =  0} },
-	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
-	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
+	{ MODKEY,               XK_C,           clipcopy,       {.i =  0} },
+	{ MODKEY,               XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ MODKEY,               XK_u,           copyurl,        {.i =  0} },
-	{ XK_ANY_MOD,           XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ XK_ANY_MOD,           XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ XK_ANY_MOD,           XK_Up,          kscrollup,      {.i =  1} },
-	{ XK_ANY_MOD,           XK_Down,        kscrolldown,    {.i =  1} },
+	{ MODKEY,               XK_Page_Up,     kscrollup,      {.i = -1} },
+	{ MODKEY,               XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ SUMETAMOD,            XK_Page_Up,     kscrollup,      {.i =  1} },
+	{ SUMETAMOD,            XK_Page_Down,   kscrolldown,    {.i =  1} },
 };
 
 /*
